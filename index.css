@@ -143,13 +143,13 @@ a {
 	transition: all 0.3s ease-out;
 }
 
-/* home  */
+/* HOME SECTION */
 #home {
 	height: 100vh;
 }
 
 .home-header {
-	padding-top: 320px;
+	padding-top: 25rem;
 }
 
 .home-h1 {
@@ -169,7 +169,7 @@ a {
 
 }
 
-/* about  */
+/* ABOUT SECTION  */
 .h1-header {
 	color: #f16821;
 	font-weight: 700;
@@ -224,6 +224,10 @@ ul {
 }
 
 /* TEAM SECTION */
+.team {
+	border-radius: 20px;
+
+}
 
 .card-img-top {
 	width: 60%;
@@ -234,6 +238,7 @@ ul {
 .card-footer {
 	background-color: white;
 }
+
 /* SERVICE SECTION */
 #services {
 	background: #f7f7f7;
@@ -247,7 +252,6 @@ ul {
 	text-align: left;
 	/* border: 1px solid #e6e6e6; */
 	transition: all 0.35s ease;
-	min-height: 300px;
 	/* box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); */
 }
 
@@ -438,7 +442,7 @@ div.scroll-container img {
 	right: 0px;
 	bottom: 0px;
 	left: 0px;
-	background-color: rgba(0, 0, 0, 0.50);
+	background-color: rgba(0, 0, 0, 0.753);
 }
 
 
@@ -459,7 +463,7 @@ div.scroll-container img {
 	right: 0px;
 	bottom: 0px;
 	left: 0px;
-	background-color: rgba(0, 0, 0, 0.65);
+	background-color: rgba(0, 0, 0, 0.808);
 }
 
 .carousel-text {
@@ -473,12 +477,14 @@ div.scroll-container img {
 	/* border:  1px solid #ffffff; */
 	/* box-shadow:  0 4px 18px rgba(0, 0, 0, 0.06); */
 }
-.card:hover{
+
+.card:hover {
 	/* border-color: #f16821; */
 	transform: translateY(-10px);
 	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
 
 }
+
 .blog-img {
 	width: 100%;
 	transition: transform 0.4s ease;
@@ -494,14 +500,10 @@ div.scroll-container img {
 
 }
 
-.contact-inner2 {
-	height: 300px;
-}
-
 .footer {
 	background: #333333;
 	color: #b4b1b1;
-	padding: 4em 0;
+	padding: 2em 0;
 }
 
 .footer li a {
@@ -522,9 +524,6 @@ div.scroll-container img {
 }
 
 @media screen and (min-width: 600px) {
-	.home-header {
-		padding-top: 27rem;
-	}
 
 	.home-h1 {
 		font-size: 3rem;
@@ -535,14 +534,9 @@ div.scroll-container img {
 	}
 
 	.btn-home2 {
-		width: 300px;
-		height: 60px;
-		font-size: 1.5rem;
-		font-weight: 700;
-	}
-
-	.icon-play {
-		margin-top: 90px;
+	
+		font-size: 1.2rem;
+		/* font-weight: 700; */
 	}
 
 	.w-50 {
@@ -559,9 +553,8 @@ div.scroll-container img {
 
 @media screen and (min-width: 814px) {
 	.home-header {
-		padding-top: 35rem;
+		padding-top: 30rem;
 	}
-
 
 	.aboutImg {
 		width: 700px;
@@ -573,9 +566,7 @@ div.scroll-container img {
 
 @media screen and (min-width: 910px) {
 
-	/* .home-header{
-		padding-top: 40rem;
-	} */
+
 	.home-h2 {
 		font-size: 1.5rem;
 	}
@@ -627,7 +618,7 @@ div.scroll-container img {
 	}
 
 	.home-header {
-		padding-top: 18.5rem;
+		padding-top: 20rem;
 	}
 
 	.home-h1 {
@@ -636,17 +627,6 @@ div.scroll-container img {
 
 	.home-h2 {
 		font-size: 1.4rem;
-	}
-
-	.btn-home2 {
-		width: 210px;
-		height: 50px;
-		font-size: 1.1rem;
-		font-weight: 500;
-	}
-
-	.icon-play {
-		margin-top: 10px;
 	}
 
 	div.scroll-container img {
