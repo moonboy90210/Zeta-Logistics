@@ -67,10 +67,6 @@ sections.forEach(section => {
     userInteracted = true;
     container.scrollBy({ left: scrollStep, behavior: "smooth" });
   }
-//   function scrollRight() {
-//     userInteracted = true;
-//     container.scrollBy({ left: 300, behavior: "smooth" });
-//   }
 
   function scrollLeftBtn() {
     scrollByAmount(-scrollStep);
@@ -130,19 +126,5 @@ sections.forEach(section => {
     const walk = (x - startX) * 2; // scroll speed
     scrollContainer.scrollLeft = scrollLeft - walk;
   });
-// document.addEventListener('scroll', function() {
-//     const background = document.querySelector('.background');
-//     const content = document.querySelector('.content');
-//     const scrollPosition = window.scrollY;
-//     const contentTop = content.offsetTop;
-
-//     if (scrollPosition >= contentTop) {
-//         background.style.position = 'fixed';
-//         background.style.top = '0';
-//     } else {
-//         background.style.position = 'absolute';
-//         background.style.top = '0';
-//     }
-// });
 
 
