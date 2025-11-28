@@ -270,6 +270,7 @@ ul {
     font-weight: 800;
     color: #f16821;
     background: rgba(255,255,255,0.2);
+	-webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     padding: 6px 16px;
     border-radius: 12px;
@@ -321,6 +322,7 @@ ul {
 .service-icon i {
 	background: linear-gradient(135deg, #f16821, #ff8800);
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
@@ -372,20 +374,10 @@ ul {
  display: none;
 }
 
-/* .scroll-container::-webkit-scrollbar-thumb {
-    background: #ddd;
-    border-radius: 10px;
-}
-
-.scroll-container::-webkit-scrollbar-track {
-    background: transparent;
-} */
-
 /* Industry card */
 .industry-card {
-    min-width: 260px;
+    min-width: 360px;
     background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
@@ -395,7 +387,7 @@ ul {
 
 .industry-card img {
     width: 100%;
-    height: 180px;
+    height: 250px;
     object-fit: cover;
     transition: transform 0.3s ease;
     border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -448,6 +440,7 @@ ul {
 	position: absolute;
 	inset: 0;
 	background: radial-gradient(circle at center, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.65));
+	-webkit-backdrop-filter: blur(1px);
 	backdrop-filter: blur(1px);
 }
 
