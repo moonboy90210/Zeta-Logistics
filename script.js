@@ -1,4 +1,4 @@
-// ----------NAVBAR responsive----------
+// ----------NAVBAR SCROLL----------
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function () {
@@ -47,7 +47,7 @@ sections.forEach(section => {
 }); 
 // -----------------------------------------
 
-// ----------CAROUSEL----------  
+// ---------- CAROUSEL ITEM----------  
   const container = document.getElementById("scrollContainer");
     let autoScrollInterval;
 	const scrollStep = 300; // Adjust if image + gap differs
