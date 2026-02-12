@@ -1,3 +1,5 @@
+
+/* ------ RESET & BASE ------ */
 * {
 	margin: 0;
 	padding: 0;
@@ -20,7 +22,17 @@ body {
 	z-index: 1000;
 }
 
-#navbar {
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.navbar {
 	width: 100%;
 	top: 0px;
 	padding: 1rem;
@@ -29,19 +41,14 @@ body {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 999;
-	transition: top 0.3s ease-in-out;
-
-}
-
 .navbar-brand {
 	color: white;
 	font-size: 1.2rem;
 	font-weight: 500;
+}
+
+.navbar-toggler {
+	border: 2px solid white;
 }
 
 .nav-link {
@@ -54,23 +61,12 @@ nav {
 }
 
 
-a {
-	text-decoration: none;
-}
 
 #offcanvasNavbar {
 	background-color: #7c7b7bf1;
 	max-width: 70%;
 }
 
-/* Default nav style (before scroll) */
-.navbar {
-	transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-.navbar-toggler {
-	  border: 2px solid white;
-
-}
 
 /* After scroll */
 .navbar.scrolled {
@@ -78,40 +74,23 @@ a {
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navbar.scrolled .nav-link {
-	color: black;
-}
-
-.navbar.scrolled .navbar-brand {
-	color: black;
-}
-
-.navbar.scrolled .offcanvas-title {
-	color: black;
-}
-
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .offcanvas-title,
 .navbar.scrolled .fa-bars {
 	color: black;
-	
 }
+
 .navbar.scrolled .navbar-toggler {
-	  border: 2px solid black;
-
+	border: 2px solid black;
 }
 
-/* Link styles */
-.navbar .nav-link {
-	transition: color 0.3s ease;
-}
-
-.navbar.scrolled .nav-link:hover {
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .navbar-brand:hover {
 	color: #f16821;
 	/* Orange on hover */
 }
 
-.navbar.scrolled .navbar-brand:hover {
-	color: #f16821;
-}
 
 /* -------- FADE EFFECT ------------ */
 .dropdown-menu {
@@ -160,6 +139,11 @@ a {
 .home-h2 {
 	font-size: 1.1rem;
 	line-height: 1.5;
+}
+.btn-home2 {
+	color: #fff;
+	background-color: #f16821;
+	border: 0;
 }
 
 .btn-home {
@@ -535,12 +519,18 @@ ul {
 	background-color: rgba(0, 0, 0, 0.637);
 }
 
+
+/* ------ TESTIMONIAL SECTION ------ */
+
+.carousel-img {
+	margin: auto;
+}
 .carousel-text {
 	font-size: 1.5rem;
 	font-style: italic;
 }
 
-/* BLOG SECTION */
+/* ------------- BLOG SECTION --------*/
 .card {
 	transition: transform 0.3s ease;
 	box-shadow:  0 9px 20px rgba(0, 0, 0, 0.08);
@@ -562,7 +552,7 @@ ul {
 	cursor: pointer;
 }
 
-/* CONTACT SECTION */
+/* ------------ CONTACT SECTION --------------*/
 #contact {
 	background-color: rgba(214, 209, 209, 0.205);
 
@@ -579,6 +569,9 @@ ul {
 	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
+
+/*------ FOOTER ------ */
+
 .footer {
 	background: #333333;
 	color: #b4b1b1;
@@ -589,13 +582,9 @@ ul {
 	color: #b4b1b1;
 }
 
-.btn-home2 {
-	color: #fff;
-	background-color: #f16821;
-	border: 0;
-}
 
 /* ----------- MEDIA QUERY--------------- */
+
 @media screen and (min-width: 600px) {
 	.home-h1 {
 		font-size: 3rem;
@@ -699,4 +688,210 @@ ul {
 		height: 300px;
 	}
 
+}
+
+/* ========================================
+   ADDITIONAL STYLES FOR MODERNIZED FEATURES
+   ======================================== */
+
+/* ==================== BACK TO TOP BUTTON ==================== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f16821, #ff8800);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(241, 104, 33, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: linear-gradient(135deg, #ff8800, #f16821);
+    box-shadow: 0 6px 20px rgba(241, 104, 33, 0.6);
+    transform: translateY(-3px);
+}
+
+.back-to-top:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(241, 104, 33, 0.4);
+}
+
+/* ==================== ENHANCED FORM VALIDATION ==================== */
+.form-control.is-valid {
+    border-color: #0dc910;
+    /* padding-right: calc(1.5em + 0.75rem); */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%230dc910' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.form-control:focus {
+    border-color: #f16821;
+    box-shadow: 0 0 0 0.2rem rgba(241, 104, 33, 0.25);
+}
+
+/* ==================== SCROLL CONTAINER CURSOR ==================== */
+#scrollContainer {
+    cursor: grab;
+
+}
+
+#scrollContainer:active {
+    cursor: grabbing;
+}
+
+/* ==================== LOADING STATES ==================== */
+.btn-home:disabled,
+.btn-outline-dark:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.btn-home.loading::after {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==================== SMOOTH TRANSITIONS ==================== */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a, button, .btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==================== ACCESSIBILITY IMPROVEMENTS ==================== */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #f16821;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    z-index: 1001;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid #f16821;
+    outline-offset: 2px;
+}
+
+/* Remove outline for mouse users */
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+
+/* ==================== IMPROVED ALERT ANIMATIONS ==================== */
+.alert {
+    animation: slideInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== MOBILE OPTIMIZATIONS ==================== */
+@media screen and (max-width: 768px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 18px;
+    }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    .back-to-top,
+    .scroll-btn,
+    nav,
+    footer form {
+        display: none !important;
+    }
+}
+
+/* ==================== PERFORMANCE: REDUCE MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==================== NEWSLETTER INPUT ENHANCEMENT ==================== */
+.input-group .form-control:focus {
+    z-index: 3;
+}
+
+footer .form-control.is-valid {
+    background-image: none;
+    border-color: #0dc910;
+}
+
+footer .form-control.is-invalid {
+    background-image: none;
+    border-color: #dc3545;
 }
