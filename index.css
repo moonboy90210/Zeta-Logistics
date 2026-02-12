@@ -1,5 +1,5 @@
 
-/* ------ RESET & BASE ------ */
+/* ===== RESET & BASE ====== */
 * {
 	margin: 0;
 	padding: 0;
@@ -14,13 +14,12 @@ html {
 }
 
 body {
-	/* overflow-x: hidden; */
-	/* overflow-y: hidden; */
+	overflow-x: hidden;
+	overflow-y: hidden;
 	max-width: 100%;
 	line-height: 1.7;
 	font-weight: 300;
 	font-size: 16px;
-	z-index: 1000;
 }
 
 img {
@@ -33,6 +32,13 @@ a {
 	text-decoration: none;
 }
 
+ul {
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+}
+
+/* ====== NAVBAR ===== */
 .navbar {
 	width: 100%;
 	top: 0px;
@@ -53,6 +59,8 @@ a {
 }
 
 .nav-link {
+    font-weight: 400;
+    letter-spacing: 0.1em;
 	color: white;
 	font-size: 1rem;
 }
@@ -61,13 +69,10 @@ a {
 	color: white;
 }
 
-
-
 #offcanvasNavbar {
 	background-color: #7c7b7bf1;
 	max-width: 70%;
 }
-
 
 /* After scroll */
 .navbar.scrolled {
@@ -93,7 +98,7 @@ a {
 }
 
 
-/* -------- FADE EFFECT ------------ */
+/* ====== FADE EFFECT ====== */
 .dropdown-menu {
 	border: 0px;
 	/* background-color: #f16821; */
@@ -123,56 +128,15 @@ a {
 	transition: all 0.3s ease-out;
 }
 
-/* HOME SECTION */
-#home {
-	height: 100vh;
-}
 
-.home-header {
-	padding-top: 20rem;
-}
+/* ===== SECTION STYLE ===== */
 
-.home-h1 {
-	font-size: 2rem;
-	font-weight: 800;
-}
-
-.home-h2 {
-	font-size: 1.1rem;
-	line-height: 1.5;
-}
-.btn-home2 {
-	color: #fff;
-	background-color: #f16821;
-	border: 0;
-}
-
-.btn-home {
-	color: #fff;
-	background-color: #f16821;
-	border: 0;
-
-}
-
-/* ABOUT SECTION  */
-.aboutImg {
-    border-radius: 16px;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    transition: transform .4s ease, box-shadow .4s ease;
-}
-.aboutImg:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
-}
-.h1-header {
+.section-header {
+    line-height: 1.1;
 	color: #f16821;
 	font-weight: 700;
 	font-size: 2rem;
 }
-
 .underline {
 	border: #f16821;
 	border-style: solid;
@@ -210,13 +174,93 @@ a {
 	margin-bottom: 30px;
 }
 
-ul {
-	list-style-type: none;
-	width: 100%;
-	padding: 0;
+.bg-image {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(img/aerial-view-cargo-ship.jpg);
+	/* background-attachment: fixed; */
+
 }
 
-/* WORK SECTION  */
+/* add black overlay to background image */
+.bg-image::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: rgba(0, 0, 0, 0.582);
+}
+
+.bg-image2 {
+	position: relative;
+	padding: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(img/medium-shot-man-writing-box.jpg);
+	/* background-attachment: fixed; */
+}
+
+.bg-image2::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: rgba(0, 0, 0, 0.637);
+}
+
+
+/* ======= HOME SECTION =======*/
+#home {
+	height: 100vh;
+}
+
+.home-header {
+	padding-top: 20rem;
+}
+
+.home-h1 {
+	font-size: 2rem;
+	font-weight: 800;
+}
+
+.home-h2 {
+	font-size: 1.1rem;
+	line-height: 1.5;
+}
+.btn-home2 {
+	color: #fff;
+	background-color: #f16821;
+	border: 0;
+}
+
+.btn-home {
+	color: #fff;
+	background-color: #f16821;
+	border: 0;
+}
+
+/* ===== ABOUT SECTION ===== */
+.aboutImg {
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+.aboutImg:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== WORK SECTION ====== */
 .work-item {
     background: rgba(255, 255, 255, 0.12); /* transparent white */
     border-radius: 20px;
@@ -232,7 +276,7 @@ ul {
     transform: translateY(-6px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
-.work-body h2 {
+.work-body h3 {
     font-weight: 700;
     letter-spacing: 0.5px;
 }
@@ -249,10 +293,10 @@ ul {
     display: inline-block;
 }
 
-/* TEAM SECTION */
+/* ===== TEAM SECTION ===== */
+
 .team {
 	border-radius: 20px;
-
 }
 
 .card-img-top {
@@ -265,7 +309,7 @@ ul {
 	background-color: white;
 }
 
-/* SERVICE SECTION */
+/* ===== SERVICE SECTION ===== */
 #services {
 	background: #f7f7f7;
 }
@@ -326,7 +370,7 @@ ul {
 
 
 
-/* INDUSTIES SECTION*/
+/* ===== INDUSTIES SECTION ====== */
 /* Scroll wrapper for smoother experience */
 .scroll-wrapper {
     overflow: hidden;
@@ -364,20 +408,10 @@ ul {
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.industry-card h5 {
+.industry-card h3 {
     margin: 15px 0;
     font-weight: 600;
     color: #333;
-}
-
-/* Hover Effects */
-.industry-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-}
-
-.industry-card:hover img {
-    transform: scale(1.05);
 }
 
 /* Navigation Buttons */
@@ -397,7 +431,7 @@ ul {
     transform: scale(1.1);
 }
 
-/* WATCH SECTION*/
+/* ===== WATCH SECTION ====== */
 .premium-watch {
 	height: 60vh;
 	position: relative;
@@ -419,6 +453,19 @@ ul {
 	z-index: 2;
 	animation: fadeUp 1.2s ease-out forwards;
 	opacity: 0;
+}
+
+/* Fade up animation for content */
+@keyframes fadeUp {
+	from {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 /* Play Button */
@@ -459,69 +506,12 @@ ul {
 
 /* Text styling */
 .watch-h2 {
-	font-size: 2rem;
 	font-weight: 700;
 	letter-spacing: 1px;
 	text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
-/* Fade up animation for content */
-@keyframes fadeUp {
-	from {
-		transform: translateY(30px);
-		opacity: 0;
-	}
-
-	to {
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-
-.bg-image {
-	position: relative;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-image: url(img/aerial-view-cargo-ship.jpg);
-	/* background-attachment: fixed; */
-
-}
-
-/* add black overlay to background image */
-.bg-image::before {
-	content: "";
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-	background-color: rgba(0, 0, 0, 0.582);
-}
-
-
-.bg-image2 {
-	position: relative;
-	padding: 20px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-image: url(img/medium-shot-man-writing-box.jpg);
-	/* background-attachment: fixed; */
-}
-
-.bg-image2::before {
-	content: "";
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-	background-color: rgba(0, 0, 0, 0.637);
-}
-
-
-/* ------ TESTIMONIAL SECTION ------ */
+/* ====== TESTIMONIAL SECTION ====== */
 
 .carousel-img {
 	margin: auto;
@@ -531,7 +521,7 @@ ul {
 	font-style: italic;
 }
 
-/* ------------- BLOG SECTION --------*/
+/* ====== BLOG SECTION ======= */
 .card {
 	transition: transform 0.3s ease;
 	box-shadow:  0 9px 20px rgba(0, 0, 0, 0.08);
@@ -572,7 +562,6 @@ ul {
 
 
 /*------ FOOTER ------ */
-
 .footer {
 	background: #333333;
 	color: #b4b1b1;
@@ -583,6 +572,20 @@ ul {
 	color: #b4b1b1;
 }
 
+/* ======= NEWSLETTER INPUT ======= */
+.input-group .form-control:focus {
+    z-index: 3;
+}
+
+footer .form-control.is-valid {
+    background-image: none;
+    border-color: #0dc910;
+}
+
+footer .form-control.is-invalid {
+    background-image: none;
+    border-color: #dc3545;
+}
 
 /* ----------- MEDIA QUERY--------------- */
 
@@ -882,17 +885,3 @@ a, button, .btn {
     }
 }
 
-/* ==================== NEWSLETTER INPUT ENHANCEMENT ==================== */
-.input-group .form-control:focus {
-    z-index: 3;
-}
-
-footer .form-control.is-valid {
-    background-image: none;
-    border-color: #0dc910;
-}
-
-footer .form-control.is-invalid {
-    background-image: none;
-    border-color: #dc3545;
-}
