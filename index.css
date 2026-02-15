@@ -18,7 +18,6 @@ body {
 	line-height: 1.7;
 	font-weight: 300;
 	font-size: 16px;
-
 }
 
 img {
@@ -149,7 +148,7 @@ ul {
 	border-top: 0;
 	border-style: solid;
 	border-radius: 1px;
-	width: 120px;
+	width: 110px;
 	height: 10px;
 	margin-bottom: 30px;
 }
@@ -163,7 +162,7 @@ ul {
 	border-radius: 1px;
 	width: 80px;
 	margin-bottom: 30px;
-	margin: auto;
+	/* margin: auto; */
 }
 
 .underline2 {
@@ -224,12 +223,9 @@ ul {
 /* ======= HOME SECTION =======*/
 #home {
 	min-height: 100vh;
-	/* Full screen height */
 	display: flex;
 	justify-content: center;
-	/* Horizontal center */
 	align-items: center;
-	/* Vertical center */
 	text-align: center;
 }
 
@@ -265,6 +261,12 @@ ul {
 }
 
 /* ===== ABOUT SECTION ===== */
+#about {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .aboutImg {
 	border-radius: 16px;
 	width: 100%;
@@ -325,9 +327,12 @@ ul {
 }
 
 .card-img-top {
-	width: 60%;
+	width: 50%;
 	margin: auto;
-	background-repeat: no-repeat;
+}
+
+.card-title {
+	font-weight: 700;
 }
 
 .card-footer {
@@ -392,8 +397,6 @@ ul {
 	color: #ff8800;
 	letter-spacing: 1px;
 }
-
-
 
 /* ===== INDUSTIES SECTION ====== */
 /* Scroll wrapper for smoother experience */
@@ -547,6 +550,7 @@ ul {
 	font-style: italic;
 }
 
+
 /* ====== BLOG SECTION ======= */
 .card {
 	transition: transform 0.3s ease;
@@ -629,8 +633,14 @@ footer .form-control.is-invalid {
 	border-color: #dc3545;
 }
 
-/* ----------- MEDIA QUERY--------------- */
+/* ====== RESPONSIVENESS ====== */
+
 @media (min-width: 768px) {
+	.navbar-brand {
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+
 	.home-h1 {
 		font-size: 2.7rem;
 	}
@@ -638,116 +648,25 @@ footer .form-control.is-invalid {
 	.home-h2 {
 		font-size: 1.5rem;
 	}
-}
-
-/* @media screen and (min-width: 600px) {
-	.home-h1 {
-		font-size: 3rem;
-	}
-
-	.home-h2 {
-		font-size: 1.3rem;
-	}
-
-	.btn-home2 {
-		font-size: 1.2rem;
-	
-	}
 
 	.w-50 {
 		max-width: 250px;
 		height: 300px;
 	}
-} */
-
-/* 
-
-
-@media (min-width: 910px) {
-	.home-h2 {
-		font-size: 1.5rem;
-	}
-
-	.watch-h2 {
-		font-size: 2.5rem;
-	}
-
-	.carousel-inner {
-		padding: 0 100px 0 100px;
-	}
-
-	div.scroll-container img {
-		width: 31rem;
-		height: 30rem;
-		padding: 10px;
-	}
 }
 
-@media (max-width: 1024px) {
-	.home-header {
-		padding-top: 35rem;
-	}
-	.home-h1 {
-		font-size: 3.5rem;
-	}
-
-	.home-h2 {
-		font-size: 1.6rem;
-	}
+@media (min-width: 1024px) {
 
 	.aboutImg {
+		margin: auto;
 		width: auto;
-		height: 420px;
+		height: 380px;
+	}
+	.carousel-item {
+		padding: 0 100px;
 	}
 }
 
-@media screen and (min-width: 1200px) {
-	body {
-		font-size: 1rem;
-		font-weight: 200;
-		line-height: 1.8rem;
-	}
-
-	.navbar-brand {
-		font-size: 1.5rem;
-	}
-
-	.nav-link {
-		font-size: 1rem;
-	}
-
-	.home-header {
-		padding-top: 20rem;
-	}
-
-	.home-h1 {
-		font-size: 3.2rem;
-	}
-
-	.home-h2 {
-		font-size: 1.4rem;
-	}
-
-	div.scroll-container img {
-		width: 500px;
-		height: 25rem;
-		padding: 10px;
-	}
-
-	.bg-image2 {
-		height: 100vh;
-	}
-
-	.w-50 {
-		max-width: 250px;
-		height: 300px;
-	}
-
-} */
-
-/* ========================================
-   ADDITIONAL STYLES FOR MODERNIZED FEATURES
-   ======================================== */
 
 /* ==================== BACK TO TOP BUTTON ==================== */
 .back-to-top {
